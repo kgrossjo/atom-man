@@ -1,5 +1,8 @@
 # man package
 
-A short description of your package.
+Aspiration: Display manual pages in a tab in Atom.
 
-![A screenshot of your spankin' package](https://f.cloud.github.com/assets/69169/2290250/c35d867a-a017-11e3-86be-cd7c5bf3ff9b.gif)
+Reality:
+* We can display the "ls" man page
+* But only the first part of it
+* and it's not scrollable.  (Why doesn't deriving from `ScrollView` do this?)
