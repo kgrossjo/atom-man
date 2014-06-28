@@ -1,0 +1,14 @@
+{
+  "name": "man",
+  "main": "./lib/man",
+  "version": "0.0.0",
+  "description": "A short description of your package",
+  "activationEvents": ["man:man"],
+  "repository": "https://github.com/atom/man",
+  "license": "MIT",
+  "engines": {
+    "atom": ">0.50.0"
+  },
+  "dependencies": {
+  }
+}
