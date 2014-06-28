@@ -1,4 +1,4 @@
-{ScrollView} = require 'atom'
+{$, ScrollView} = require 'atom'
 exec = require('child_process').exec;
 
 module.exports =
@@ -19,7 +19,9 @@ module.exports =
             exec 'man -w ls', (error, stdout, stderr) =>
                 file = stdout.replace("\n", "")
                 exec "groff -mandoc -T html '#{file}'", (error, stdout, stderr) =>
-                    @manViewContent.html(stdout)
+                    fudged = stdout.replace('<body>', '<div class="manpage-body">').replace('</body>','</div>');
+                    dom = $(fudged).filter('div.manpage-body')
+                    @manViewContent.append(dom)
 
         serialize: ->
             deserializer: 'ManView'
