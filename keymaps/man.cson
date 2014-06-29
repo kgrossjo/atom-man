@@ -10,4 +10,7 @@
 '.workspace':
     'ctrl-alt-o': 'man:man'
 
-    
+'.man-view':
+    'j': 'core:move-down'
+    'k': 'core:move-up'
+    'q': 'core:close'
