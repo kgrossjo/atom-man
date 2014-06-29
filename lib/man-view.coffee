@@ -13,12 +13,11 @@ module.exports =
 
         constructor: ({@filePath, @uri}) ->
             super
-
-        initialize: ->
-            super
-            exec 'man -w ls', (error, stdout, stderr) =>
+            wcmd = "man -w #{@filePath}"
+            exec wcmd, (error, stdout, stderr) =>
                 file = stdout.replace("\n", "")
-                exec "groff -mandoc -T html '#{file}'", (error, stdout, stderr) =>
+                cmd = "groff -mandoc -T html '#{file}'"
+                exec cmd, (error, stdout, stderr) =>
                     fudged = stdout.replace('<body>', '<div class="manpage-body">').replace('</body>','</div>');
                     dom = $(fudged).filter('div.manpage-body')
                     @manViewContent.append(dom)

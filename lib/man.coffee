@@ -1,10 +1,7 @@
 exec = require('child_process').exec;
 url = require('url');
 ManView = require('./man-view');
-
-man = () ->
-    uri = "man://editor/ls";
-    atom.workspace.open(uri);
+ManInputView = require './man-input-view'
 
 man_opener = (uriToOpen) ->
     parsed = url.parse(uriToOpen);
@@ -13,12 +10,17 @@ man_opener = (uriToOpen) ->
     result = new ManView(uri: uriToOpen, filePath: path);
     return result;
 
-module.exports = {
+module.exports = 
+    manInputView: null
+
     activate: (state) ->
-        atom.workspaceView.command("man:man", man);
         atom.workspace.registerOpener(man_opener);
+        atom.workspaceView.command 'man:man', @man
     ,
     deactivate: () ->
+        @manInputView.destroy()
     ,
     serialize: () ->
-}
+    ,
+    man: () ->
+        @manInputView = new ManInputView()
