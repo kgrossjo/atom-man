@@ -1,10 +1,3 @@
 # man package
 
-Aspiration: Display manual pages in a tab in Atom.
-
-Reality:
-* We can display the "ls" man page
-* But only the first part of it
-* and it's not scrollable.  (Why doesn't deriving from `ScrollView` do this?)
-
-Okay.  Markdown Preview doesn't generate scrollable previews, either.
+Display Unix man pages inside Atom.  This has been tested with OSX.  It probably needs work for Linux.  It is not applicable to Windows.  (Or do we want to display Cygwin man pages on Windows?)
