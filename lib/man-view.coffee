@@ -20,6 +20,9 @@ module.exports =
                 exec cmd, (error, stdout, stderr) =>
                     fudged = stdout.replace('<body>', '<div class="manpage-body">').replace('</body>','</div>');
                     dom = $(fudged).filter('div.manpage-body')
+                    dom.css('fontFamily', atom.config.get('editor.fontFamily'))
+                    dom.css('fontSize', atom.config.get('editor.fontSize'))
+                    dom.css('lineHeight', atom.config.get('editor.lineHeight'))
                     @manViewContent.append(dom)
 
         serialize: ->
