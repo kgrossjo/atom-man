@@ -16,7 +16,10 @@ module.exports =
             wcmd = "man -w #{@filePath}"
             exec wcmd, (error, stdout, stderr) =>
                 file = stdout.replace("\n", "")
-                cmd = "groff -mandoc -T html '#{file}'"
+                if file.match(/\.gz$/)
+                    cmd = "gzcat '#{file}' | groff -mandoc -T html"
+                else
+                    cmd = "groff -mandoc -T html '#{file}'"
                 exec cmd, (error, stdout, stderr) =>
                     fudged = stdout.replace('<body>', '<div class="manpage-body">').replace('</body>','</div>');
                     dom = $(fudged).filter('div.manpage-body')
