@@ -1,3 +1,6 @@
+## 0.3.0 - gzip
+* Support gzipped man pages
+
 ## 0.2.1 - Changelog
 * Update changelog (sorry I'm still learning how apm works).
 
