@@ -1,4 +1,3 @@
-exec = require('child_process').exec;
 url = require('url');
 ManView = require('./man-view');
 ManInputView = require './man-input-view'
@@ -10,7 +9,7 @@ man_opener = (uriToOpen) ->
     result = new ManView(uri: uriToOpen, filePath: path);
     return result;
 
-module.exports = 
+module.exports =
     manInputView: null
 
     activate: (state) ->
