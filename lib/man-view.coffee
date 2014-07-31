@@ -20,7 +20,7 @@ module.exports =
                     return
                 file = stdout.replace("\n", "")
                 if file.match(/\.gz$/)
-                    cmd = "gzcat '#{file}' | groff -mandoc -T html"
+                    cmd = "gunzip -c '#{file}' | groff -mandoc -T html"
                 else
                     cmd = "groff -mandoc -T html '#{file}'"
                 exec cmd, (error, stdout, stderr) =>
