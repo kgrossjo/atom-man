@@ -1,4 +1,4 @@
-{$, EditorView, View} = require 'atom'
+{$, TextEditorView, View} = require 'atom-space-pen-views'
 ManView = require './man-view'
 
 module.exports =
@@ -6,7 +6,7 @@ module.exports =
         detaching: false
         @content: ->
             @div class: 'overlay man-view-input from-top mini', =>
-                @subview 'selectEditor', new EditorView(mini: true)
+                @subview 'selectEditor', new TextEditorView(mini: true)
 
         initialize: ->
             @on 'core:confirm', => @confirm()

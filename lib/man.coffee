@@ -13,8 +13,9 @@ module.exports =
     manInputView: null
 
     activate: (state) ->
-        atom.workspace.registerOpener(man_opener);
-        atom.workspaceView.command 'man:man', @man
+        atom.workspace.addOpener(man_opener);
+        atom.commands.add 'atom-text-editor',
+            'man:man', @man
     ,
     deactivate: () ->
         @manInputView.destroy()

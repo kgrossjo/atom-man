@@ -7,7 +7,7 @@
 
 # For more detailed documentation see
 # https://atom.io/docs/latest/advanced/keymaps
-'.workspace':
+'atom-workspace':
     'shift-f1': 'man:man'
 
 '.man-view':

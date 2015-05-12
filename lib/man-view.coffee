@@ -1,4 +1,4 @@
-{$, ScrollView} = require 'atom'
+{$, ScrollView} = require 'atom-space-pen-views'
 exec = require('child_process').exec;
 
 module.exports =
