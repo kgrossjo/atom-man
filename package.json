@@ -1,17 +1,19 @@
 {
-    "name": "man",
-    "main": "./lib/man",
-    "version": "0.3.0",
-    "description": "View Unix man pages inside Atom.",
-    "activationCommands": {
-        "atom-workspace": ["man:man"]
-    },
-    "repository": "https://github.com/kgrossjo/atom-man",
-    "license": "MIT",
-    "engines": {
-        "atom": ">0.197.0"
-    },
-    "dependencies": {
-        "atom-space-pen-views": "^2.0.3"
-    }
+  "name": "man",
+  "main": "./lib/man",
+  "version": "0.4.0",
+  "description": "View Unix man pages inside Atom.",
+  "activationCommands": {
+    "atom-workspace": [
+      "man:man"
+    ]
+  },
+  "repository": "https://github.com/kgrossjo/atom-man",
+  "license": "MIT",
+  "engines": {
+    "atom": ">0.197.0"
+  },
+  "dependencies": {
+    "atom-space-pen-views": "^2.0.3"
+  }
 }
