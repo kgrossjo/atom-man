@@ -5,12 +5,12 @@ module.exports =
     class ManInputView extends View
         detaching: false
         @content: ->
-            @div class: 'overlay man-view-input from-top mini', =>
+            @div class: 'command-palette', =>
                 @subview 'selectEditor', new TextEditorView(mini: true)
 
         initialize: ->
-            @on 'core:confirm', => @confirm()
-            @on 'core:cancel', => @detach()
+            atom.commands.add 'atom-text-editor', 'core:confirm', => @confirm()
+            atom.commands.add 'atom-text-editor', 'core:cancel', => @detach()
             @attach()
 
         toggle: ->
@@ -24,6 +24,7 @@ module.exports =
             @detaching = true
             selectEditorFocused = @selectEditor.isFocused
             @selectEditor.setText('')
+            @panel.destroy()
             super
             @detaching = false
 
@@ -34,5 +35,6 @@ module.exports =
             @detach()
 
         attach: ->
-            atom.workspaceView.append(this)
+            @panel ?= atom.workspace.addModalPanel(item: this)
+            @panel.show()
             @selectEditor.focus()
