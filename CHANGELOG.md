@@ -1,3 +1,7 @@
+## 0.6.0 - rewrite
+* Rewrite in JavaScript
+* Adjust to new Atom APIs
+
 ## 0.3.0 - gzip
 * Support gzipped man pages
 

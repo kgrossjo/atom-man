@@ -1,0 +1,7 @@
+{
+    ".man-output": {
+        "j": "core:move-down",
+        "k": "core:move-up",
+        "q": "core:close"
+    }
+}

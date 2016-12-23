@@ -7,4 +7,4 @@ display Cygwin man pages on Windows?)
 ## Usage
 
 There is a "Man: Man" command in the command palette.  It asks for the man page
-to view.  The default keyboard shortcut is Shift-F1.
+to view.
