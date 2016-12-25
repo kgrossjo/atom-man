@@ -1,0 +1,30 @@
+{
+    "scopeName": "text.manpage",
+    "name": "Man Page",
+    "patterns": [
+        {
+            "match": "(\u0001)(\\S*)(\u0002)",
+            "name": "man-bold",
+            "captures": {
+                "1": {
+                    "name": "man-hidden"
+                },
+                "3": {
+                    "name": "man-hidden"
+                }
+            }
+        },
+        {
+            "match": "(\u0003)(\\S*)(\u0004)",
+            "name": "man-italic",
+            "captures": {
+                "1": {
+                    "name": "man-hidden"
+                },
+                "3": {
+                    "name": "man-hidden"
+                }
+            }
+        }
+    ]
+}

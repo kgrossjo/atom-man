@@ -8,3 +8,9 @@ display Cygwin man pages on Windows?)
 
 There is a "Man: Man" command in the command palette.  It asks for the man page
 to view.
+
+## Internal 
+
+To learn how grammars work, see here:
+
+https://gist.github.com/DamnedScholar/622926bcd222eb1ddc483d12103fd315

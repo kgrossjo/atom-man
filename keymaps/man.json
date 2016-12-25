@@ -3,5 +3,10 @@
         "j": "core:move-down",
         "k": "core:move-up",
         "q": "core:close"
+    },
+    ".manpage": {
+        "j": "core:move-down",
+        "k": "core:move-up",
+        "q": "core:close"
     }
 }
