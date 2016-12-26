@@ -1,3 +1,6 @@
+## 0.7.0 - view in text editor
+* New view implementation, uses text editor.
+
 ## 0.6.0 - rewrite
 * Rewrite in JavaScript
 * Adjust to new Atom APIs
