@@ -1,3 +1,8 @@
+## 0.8.0 - code cleanup, scrolling
+* Clean up code: use better file names and class names,
+  remove support for old HTML-based view system.
+* New keybindings for scrolling by page and by line.
+
 ## 0.7.0 - view in text editor
 * New view implementation, uses text editor.
 
