@@ -4,6 +4,7 @@
         "shift-space": "man:page-up",
         "j": "man:scroll-down",
         "k": "man:scroll-up",
-        "q": "core:close"
+        "q": "core:close",
+        "m": "man:man"
     }
 }
