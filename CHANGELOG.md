@@ -1,3 +1,6 @@
+## 0.8.1 - new keybinding
+* In a man page, 'm' invokes 'man:man'.
+
 ## 0.8.0 - code cleanup, scrolling
 * Clean up code: use better file names and class names,
   remove support for old HTML-based view system.
