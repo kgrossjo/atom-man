@@ -1,3 +1,6 @@
+## 0.8.2 - avoid CSS/LESS error
+* Remove dead CSS rules, avoiding error on startup
+
 ## 0.8.1 - new keybinding
 * In a man page, 'm' invokes 'man:man'.
 
